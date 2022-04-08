@@ -6,7 +6,7 @@
 import { serve } from "https://deno.land/std@0.133.0/http/server.ts";
 import { router } from "https://crux.land/router@0.0.11";
 import { h, ssr } from "https://crux.land/nanossr@0.0.4";
-import landnames from "./landnames.json" assert { type: "json" };
+import landnames from "https://raw.githubusercontent.com/RoeHH/flagoguesser/master/landnames.json" assert { type: "json" };
 
 const render = (component:any) => ssr(() => <App>{component}</App>);
 
@@ -67,7 +67,7 @@ interface ButtonContent{
 
 function Play() {
   const landcode = "ch"//landnames.at(Math.round(Math.random() * (landnames.length - 1))) || "";
-  const buttonContents: ButtonContent[] = landnames.map((landname) => { return { name: landname, win: landname === landcode } });
+  const buttonContents: ButtonContent[] = landnames.map((landname: any) => { return { name: landname, win: landname === landcode } });
   console.log(buttonContents);
   
 
