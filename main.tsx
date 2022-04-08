@@ -66,18 +66,18 @@ interface ButtonContent{
 }
 
 function Play() {
-  const landcode = "ch"//landnames.at(Math.round(Math.random() * (landnames.length - 1))) || "";
-  const buttonContents: ButtonContent[] = landnames.map((landname: any) => { return { name: landname, win: landname === landcode } });
+  const landcode = landnames.at(Math.round(Math.random() * (landnames.length - 1))) || "";
+  const buttonContents: ButtonContent[] = landnames.sort(() => Math.random() - 0.5).slice(0,3).map((landname: any) => { return { name: landname, win: false } });
   console.log(buttonContents);
-  
+  buttonContents.push({ name: landcode, win: true });
 
   return (
     <div class="p-5">
       <dl class="mt-5 grid gap-5 sm:grid-cols-4 sm:grid-rows-2">
         <div class="col-start-2 col-end-4 grid place-items-center" >
-          <Flag name="ch" />
+          <Flag name={landcode} />
         </div>
-            {buttonContents.map((buttonContent) => (
+            {buttonContents.sort(() => Math.random() - 0.5).map((buttonContent) => (
               <LandButton landname={buttonContent.name} win={buttonContent.win} />
             ))}
       </dl>
