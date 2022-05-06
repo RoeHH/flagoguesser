@@ -1,8 +1,8 @@
 function test(input){
   const buttons = document.querySelectorAll("button");
-  for(const b of buttons){
-    b.addEventListener('click', event => {
-        console.log( event.target.id );
-   });
-  }
+  buttons.forEach(btn => {
+     btn.addEventListener('click', event => {
+          console.log( "efsdsf" );
+     });
+  });
 }
