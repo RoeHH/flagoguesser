@@ -14,7 +14,7 @@ import NavBar from "../components/NavBar.tsx";
 
 export default function MainPage(props: PageProps) {
   return (
-    <div class="min-h-screen">
+    <div class={tw`min-h-screen`}>
       <NavBar />
       <div class={tw`flex justify-center items-center`}>
         <div class={tw`max-w-7xl py-12 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between`}>

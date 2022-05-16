@@ -6,7 +6,7 @@ import Play from "../islands/Play.tsx";
 
 export default function PlayContainer(props: h.JSX.HTMLAttributes<HTMLButtonElement>) {
   return (
-    <div class="min-h-screen">
+    <div class={tw`min-h-screen`}>
         <NavBar />
         <Play />
     </div>
