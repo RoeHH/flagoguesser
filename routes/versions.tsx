@@ -3,7 +3,7 @@
 import { h, tw } from "../client_deps.ts";
 import NavBar from "../components/NavBar.tsx";
 
-const urls = ["https://comfortable-pheasant-86-bv9q02zgzndg.deno.dev", "https://flagoguesser-2p6s0we0fse0.deno.dev" ];
+const urls = ["https://comfortable-pheasant-86-bv9q02zgzndg.deno.dev", "https://flagoguesser-2p6s0we0fse0.deno.dev", "https://flagoguesser.deno.dev" ];
 
 export default function PlayContainer() {
   let i = 0;
