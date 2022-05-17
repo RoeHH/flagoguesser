@@ -11,7 +11,7 @@ export default function NavBar(props: h.JSX.HTMLAttributes<HTMLButtonElement>) {
      <div>
         <a href="/versions" class={tw`text-lg no-underline hover:text-indigo-800 ml-3`}>Versions</a>
         <a href="/flags" class={tw`text-lg no-underline hover:text-indigo-800 ml-3`}>Flags</a>
-        <a href="/play" class={tw`text-lg no-underline hover:text-indigo-800 ml-3`}>Play</a>
+        <a href="/" class={tw`text-lg no-underline hover:text-indigo-800 ml-3`}>Play</a>
      </div>
     </nav>
   );
