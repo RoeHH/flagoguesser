@@ -24,7 +24,7 @@ export default function MainPage(props: PageProps) {
           </h2>
           <div class={tw`mt-8 flex lg:mt-0 lg:flex-shrink-0 lg:ml-8`}>
             <div class={tw`inline-flex rounded-md shadow`}>
-              <a href="/play" class={tw`inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700`}> Play </a>
+              <a href="/play" class={tw`inline-flex items-center justify-center px-5 py-3 border text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700`}> Play </a>
             </div>
           </div>
         </div>
