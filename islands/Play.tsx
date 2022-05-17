@@ -9,34 +9,40 @@ export default function Play() {
   const [count, setCount] = useState(0);
 
   const buttonClickEvent = (win: boolean) => {
-    win ? setCount(count + 1) : setCount(count);
+    win ? setCount(count + 1) : setCount(0);
   };
 
-  const landcode =
-    landnames.at(Math.round(Math.random() * (landnames.length - 1))) || "";
+  let first = true;
+  let landcode = "";
   const buttonContents: ButtonContent[] = landnames
     .sort(() => Math.random() - 0.5)
-    .slice(0, 3)
-    .map((landname: any) => {
-      return {
-        landname: landname,
-        win: false,
-        event: buttonClickEvent,
-      };
+    .slice(0, 4)
+    .map((landname: string) => {
+      if (first) {
+        first = false;
+        landcode = landname;
+        return {
+          landname: landname,
+          win: true,
+          event: buttonClickEvent,
+        };
+      } else {
+        return {
+          landname: landname,
+          win: false,
+          event: buttonClickEvent,
+        };
+      }
     });
-  buttonContents.push({
-    landname: landcode,
-    win: true,
-    event: buttonClickEvent,
-  });
 
   return (
     <div class={tw`p-5`}>
       {count}
-      <dl class={tw`mt-5 grid gap-5 sm:grid-cols-4 sm:grid-rows-2`}>
-        <div class={tw`col-start-2 col-end-4 grid place-items-center`}>
+      <dl class={tw`mt-5 grid gap-5 grid-rows-1 grid-cols-2 sm:grid-cols-4`}>
+        <div class={tw`col-start-1 col-end-3 sm:col-start-2 sm:col-end-4 grid place-items-center`}>
           <Flag name={landcode} />
         </div>
+        <div class={tw`hidden sm:block h-20`}></div>
         {buttonContents
           .sort(() => Math.random() - 0.5)
           .map((buttonContent) => (

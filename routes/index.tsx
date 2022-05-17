@@ -2,17 +2,12 @@
 /** @jsxFrag Fragment */
 
 import {
-  asset,
-  ComponentChildren,
-  Fragment,
   h,
-  Head,
-  PageProps,
   tw,
 } from "../client_deps.ts";
 import NavBar from "../components/NavBar.tsx";
 
-export default function MainPage(props: PageProps) {
+export default function MainPage() {
   return (
     <div class={tw`min-h-screen`}>
       <NavBar />
