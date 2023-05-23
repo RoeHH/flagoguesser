@@ -3,7 +3,12 @@ body {
 }
 
 .hiden{
-  visibility: hidden;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+.hidden.hidden-fade-out {
+  opacity: 0;
 }
 
 *,
