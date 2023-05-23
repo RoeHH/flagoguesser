@@ -2,9 +2,13 @@ body {
   background-color: black;
 }
 
-.hiden{
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.hidden.hidden-fade-in {
   opacity: 1;
-  transition: opacity 0.5s ease-out;
 }
 
 .hidden.hidden-fade-out {
